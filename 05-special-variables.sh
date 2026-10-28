@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "all arg passed to the script: $@ "
+echo "all args passed to the script as word: $*"
+echo "exit status of previous command: $?"
+echo "name of user running the script: $USER"
+echo "dirctory running the script: $PWD"
+echo "First arg of the script: $1"
+echo "script name: $0"
+echo "full path of the script: $(realpath $0)"
+echo "line no" $LINENO"
+echo "pid of the script: $$"
+sleep 10 &
+echo "pid of the backgound command: $!
+echo "No of arg passed to the script: $#"
+echo "total time the script executed: $SECONDS"
+echo " Home direcry of the currnt user: $HOME"
