@@ -3,7 +3,7 @@ user_id=$(id -u)
 log_folder="/var/log/shell-pratice"
 log_file="${log_folder}/${0}.log"
 
-if [$user_id -ne 0];then
+if [ $user_id -ne 0 ];then
    echo "PLEASE RUN USING THE SUDO USER"
    exit 1
 fi
