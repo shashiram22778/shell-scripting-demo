@@ -17,15 +17,19 @@ validate(){
         echo "${2} is failed"
         exit 1
     else
-        echo "${2} is completed successfully"
+        echo "${2} is completed successfully" &>> $log_file
     fi    
+}
+
+install(){
+    dnf install "$1" -y;
 }
 
 for x in $@
 do  
-     echo "installing $x"
-     validate x
-     echo "$x is installed successfully" | -tee $log_file
+    echo "installing ${x}"
+    install "$x"
+    validate $? "$x"
 done     
 
 
