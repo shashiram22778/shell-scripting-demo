@@ -32,7 +32,7 @@ do
         install $x
         validate $? "$x"
      else
-        echo "$x is already instlled so skipping"  &>> $log_file
+        echo "$x is already instlled so skipping" | tee -a $log_file
       fi
 done         
     
