@@ -22,12 +22,12 @@ validate(){
 }
 
 install(){
-    dnf install "$1" -y;
+    dnf install "$1" -y; &>> $log_file
 }
 
 for x in $@
 do
-     rpm -q "$x" &>/dev/null
+     dnf list installed $x &>> $logs_file
      if [ $? -ne 0 ]; then
         install $x
         validate $? "$x"
