@@ -27,4 +27,4 @@ validate $? "Nginx Installtion"
 dnf install mysql -y &>> $log_file
 validate $? "Mysql Installtion"
 
-echo "script execution is completed at $(date +"%F %T")" &>> $logs_file
+echo "script execution is completed at $(date +"%F %T")" &>> $log_file
