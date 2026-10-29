@@ -17,7 +17,7 @@ validate(){
         echo "${2} is failed"
         exit 1
     else
-        echo "${2} is completed successfully"
+        echo "${2} is completed successfully" &>> $log_file
     fi    
 }
 
@@ -32,7 +32,7 @@ do
         install $x
         validate $? "$x"
      else
-        echo "$x is already instlled so skipping"
+        echo "$x is already instlled so skipping"  &>> $log_file
       fi
 done         
     
