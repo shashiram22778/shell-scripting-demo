@@ -27,7 +27,7 @@ install(){
 
 for x in $@
 do
-     dnf list installed $x &>> $logs_file
+     dnf list installed $x &>> $log_file
      if [ $? -ne 0 ]; then
         install $x
         validate $? "$x"
