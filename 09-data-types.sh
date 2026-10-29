@@ -13,7 +13,7 @@ COUNT=COUNT+1
 echo "Count is: $COUNT"
 
 FRUITS=("Apple","Banana","Pappaya")
-echo "Print all fruits:${FRUITS[@]}"
+echo "Print all fruits:${FRUITS[$@]}"
 echo "Print first fruit:${FRUITS[$1]}"
 
 NAME=shashiram
