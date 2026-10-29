@@ -27,7 +27,7 @@ install(){
 
 for x in $@
 do
-     rpm -q "$x"
+     rpm -q "$x" &>/dev/null
      if [ $? -ne 0 ]; then
         install $x
         validate $? "$x"
